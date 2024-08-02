@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Zain:wght@200;300;400;700;800;900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -24,6 +26,71 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+h1 {
+  @apply text-6xl sm:text-8xl md:text-9xl text-center;
+}
+
+h2 {
+  @apply text-xl sm:text-3xl md:text-4xl text-center;
+}
+
+p {
+  @apply text-xs sm:text-base md:text-xl;
+}
+
+.product-1 {
+  @apply w-[73px] h-[97px] sm:w-[145px] sm:h-[193px] md:w-[218px] md:h-[290px] transform -translate-x-28 sm:-translate-x-52 md:-translate-x-80 rounded-3xl overflow-hidden hover:scale-[102%] cursor-pointer transition-all ease-in-out shadow-md z-0;
+}
+
+.product-2 {
+  @apply w-[88px] h-[117px] sm:w-[177px] sm:h-[235px] md:w-[265px] md:h-[352px] transform -translate-x-16 sm:-translate-x-32 md:-translate-x-52 rounded-3xl overflow-hidden opacity-90 shadow-2xl shadow-secondary hover:scale-105 cursor-pointer transition-transform ease-in-out z-10;
+}
+
+.product-3 {
+  @apply h-[148px] w-[115px] sm:h-[296px] sm:w-[230px] md:h-[444px] md:w-[345px] rounded-3xl overflow-hidden cursor-pointer transition-all ease-in-out shadow-lg shadow-primary z-20;
+}
+
+.product-3 .image {
+  @apply transition-all;
+}
+
+.product-3.transitioned {
+  @apply hover:scale-110 hover:shadow-dark;
+}
+
+.product-3.transitioned:hover .image {
+  @apply brightness-[.25];
+}
+
+.product-4 {
+  @apply w-[88px] h-[117px] sm:w-[177px] sm:h-[235px] md:w-[265px] md:h-[352px] transform translate-x-16 sm:translate-x-32 md:translate-x-52 rounded-3xl overflow-hidden opacity-90 shadow-2xl shadow-secondary hover:scale-105 cursor-pointer transition-transform ease-in-out z-10;
+}
+
+.product-5 {
+  @apply w-[73px] h-[97px] sm:w-[145px] sm:h-[193px] md:w-[218px] md:h-[290px] transform translate-x-28 sm:translate-x-52 md:translate-x-80 rounded-3xl overflow-hidden hover:scale-[102%] cursor-pointer transition-all ease-in-out z-0;
+}
+
+.product-1,
+.product-2,
+.product-3,
+.product-4,
+.product-5 {
+  @apply transition-all duration-300;
+}
+
+.shop-text {
+  font-family: "Ubuntu Mono";
+  letter-spacing: -2px;
+  word-spacing: -6px;
+  font-weight: 300;
+  visibility: hidden;
+  user-select: none;
+}
+
+.product-3.transitioned:hover > .shop-text {
+  @apply text-light z-30 visible;
 }
 
 @layer utilities {

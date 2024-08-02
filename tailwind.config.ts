@@ -8,13 +8,21 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      colors: {
+        primary: "#EF9C3E",
+        secondary: "#937CE8",
+        light: "#EAF0FA",
+        dark: "#323339",
+      },
+      fontFamily: {
+        body: ["Nunito"],
+      },
+      width: {
+        "15": "3.75rem",
       },
     },
   },
+  darkMode: "class",
   plugins: [],
 };
 export default config;
