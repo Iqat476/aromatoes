@@ -36,6 +36,10 @@ h2 {
   @apply text-xl sm:text-3xl md:text-4xl text-center;
 }
 
+h4 {
+  @apply text-sm sm:text-base md:text-lg text-center;
+}
+
 p {
   @apply text-xs sm:text-base md:text-xl;
 }
